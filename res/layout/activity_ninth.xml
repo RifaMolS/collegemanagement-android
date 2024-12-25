@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"  
+    android:layout_width="match_parent"  
+    android:layout_height="match_parent">  
+
+    <!-- Background Image -->  
+    <ImageView  
+        android:id="@+id/background_image"  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:scaleType="centerCrop"  
+        android:src="@drawable/back" />  
+
+    <!-- Semi-Transparent Overlay for Text Readability -->  
+    <View  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:background="#80000000" /> <!-- Adjust transparency with the alpha value (0-255 in hex, e.g., #80 = 50% opacity) -->  
+
+    <!-- Content ScrollView -->  
+    <ScrollView  
+        android:layout_width="match_parent"  
+        android:layout_height="match_parent"  
+        android:padding="16dp"  
+        android:layout_marginTop="16dp">  
+
+        <LinearLayout  
+            android:layout_width="match_parent"  
+            android:layout_height="wrap_content"  
+            android:orientation="vertical">  
+
+            <!-- Title -->  
+            <TextView  
+                android:id="@+id/about_us_title"  
+                android:layout_width="wrap_content"  
+                android:layout_height="wrap_content"  
+                android:layout_gravity="center_horizontal"  
+                android:layout_marginBottom="16dp"  
+                android:text="About Us"  
+                android:textColor="#FFFFFF"  
+                android:textSize="28sp"  
+                android:textStyle="bold"  
+                android:fontFamily="sans-serif-condensed" />  
+
+            <!-- Content -->  
+            <TextView  
+                android:id="@+id/about_us_content"  
+                android:layout_width="match_parent"  
+                android:layout_height="wrap_content"  
+                android:lineSpacingExtra="6dp"  
+                android:text="Welcome to SNIT Event Management System! We provide a comprehensive platform designed to bring your college events to life. Whether you're planning a cultural fest, a technical workshop, or a grand sports tournament, we ensure every moment is seamless and memorable.  
+
+With real-time updates, collaboration tools, and a community-driven approach, our system empowers students and faculty alike to innovate and connect. Let's build a vibrant campus culture, one extraordinary event at a time!"  
+                android:textColor="#FFFFFF"  
+                android:textSize="18sp"  
+                android:fontFamily="sans-serif-light"  
+                android:layout_marginBottom="16dp" />  
+              
+           <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/button1"
+                android:layout_alignBottom="@+id/button1"
+                android:layout_alignRight="@+id/textView3"
+                android:text="Back" 
+                android:onClick="back"/>
+
+        </LinearLayout>  
+    </ScrollView>  
+</RelativeLayout>  
